@@ -1,0 +1,31 @@
+# Local credentials and recovery material
+/config/application.properties
+/docs/STATIC_REVIEW.md
+/docs/PROJECT_REVIEW.md
+/docs/MIGRATION.md
+.env
+.env.*
+!.env.example
+*.key
+*.keystore
+*.p12
+aes_key.bin
+aes_iv.bin
+# Original local personal artifacts and bundled binaries (never package these)
+/src/Files/
+/build/
+/dist/
+/target/
+/exports/
+/logs/
+*.log
+*.class
+*.jar
+/nbproject/private/
+/.idea/
+*.iml
+/.classpath
+/.project
+/.settings/
+.DS_Store
+Thumbs.db

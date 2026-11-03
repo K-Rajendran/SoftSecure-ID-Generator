@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Optional Ant compatibility entry point. Maven is the sole dependency/build definition. -->
+<project name="SoftSecure-ID-Generator" default="package" basedir=".">
+  <macrodef name="maven">
+    <attribute name="goal"/>
+    <sequential>
+      <exec executable="cmd.exe" osfamily="windows" failonerror="true">
+        <arg value="/d"/><arg value="/c"/><arg value="mvn.cmd"/><arg value="@{goal}"/>
+      </exec>
+      <exec executable="mvn" osfamily="unix" failonerror="true"><arg value="@{goal}"/></exec>
+    </sequential>
+  </macrodef>
+  <target name="compile" description="Compile using Maven and JDK 17">
+    <maven goal="compile"/>
+  </target>
+  <target name="package" description="Package the application and its runtime dependencies">
+    <maven goal="package"/>
+  </target>
+  <target name="jar" depends="package"/>
+  <target name="clean" description="Remove Maven output">
+    <maven goal="clean"/>
+  </target>
+  <target name="run" depends="package" description="Launch the Swing application">
+    <java jar="target/softsecure-id-generator-2.0.0-SNAPSHOT.jar" fork="true" failonerror="true"/>
+  </target>
+</project>
