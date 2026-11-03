@@ -337,9 +337,15 @@ I/O off it; keep authorization in services; use synthetic data in examples and
 screenshots. Describe schema/security implications and validation evidence in
 pull requests. Do not commit keys, passwords, real portraits or ID cards.
 
-No project license was supplied, and this refactor does **not** assign one.
-The repository owner must choose and add an appropriate license and clarify
-rights to any institutional branding/assets before public distribution.
-Third-party components retain their own licenses; inspect their distribution
-notices and transitive dependencies as part of release review. Ignored binaries
-from the old project are not part of the new dependency manifest.
+### License
+This project is licensed under the Apache License, Version 2.0.
+You may use, modify, and distribute this software in accordance with the terms
+and conditions of the Apache License 2.0. A copy of the license is available
+in the repository's LICENSE file.
+
+The Apache License 2.0 does not automatically grant rights to third-party trademarks,
+institutional branding, logos, or other independently owned assets. Ensure that
+appropriate permissions are obtained before using or redistributing such materials.
+
+Third-party libraries and components retain their respective licenses. Review their license terms,
+distribution notices, and transitive dependencies before including them in releases.
